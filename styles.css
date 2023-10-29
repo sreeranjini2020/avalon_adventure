@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
 }
 .header{
     min-height: 100vh;
@@ -11,6 +12,16 @@
     background-size: cover;
     position: relative;
 }
+
+/* .header iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+  } */
+
 nav{
     display: flex;
     padding: 0% 6%;
@@ -67,8 +78,8 @@ nav img{
 .hero-btn{
     display: inline-block;
     text-decoration: none;
-    color: #0097b2;
-    border: 1px solid #0097b2;
+    color: #1d4286;
+    border: 1px solid #1d4286;
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
@@ -76,8 +87,9 @@ nav img{
     cursor: pointer;
 }
 .hero-btn:hover{
-    border: 1px solid #6cbe4c;
-    background: #6cbe4c;
+    border: 1px solid #0097b2;
+    color: #0097b2;
+    background: #292929;
     transition: 1s;
 }
 nav .fa{
@@ -115,7 +127,7 @@ nav .fa{
 }
 /*----------------service-----------------------*/
 
-.services{
+.home_services{
     width: 80%;
     margin: auto;
     text-align: center;
@@ -142,24 +154,35 @@ nav .fa{
 } */
 
 
-.services{
+.home_services{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
 }
-.services h1{
+.home_services h1{
     color: #0097b2;
     font-size: 36px;
     font-weight: 600;
 }
-.services p{
+.home_services p{
     color: #292929;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
 }
+
+.home_services_container{
+    display:flex;
+    flex-direction: column;
+}
+
+.row_container{
+    display:flex;
+    justify-content: space-around;
+}
+
 .row{
     margin-top: 5%;
     display: flex;
@@ -189,12 +212,6 @@ nav .fa{
     margin-top: 15px;
     text-align: left;
 
-}
-@media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
-    
 }
 
 
@@ -275,16 +292,25 @@ footer p {
     margin-top: 70px;
 }
 .about-us{
-    width: 80%;
+    display: flex;
+    width: 100%;
     margin: auto;
     padding-top: 80px;
     padding-bottom: 50px;
+    justify-content: space-around;
+}
+.about-col{
+    color: #1d4286;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: 1px solid #1d4286;
+    box-sizing: border-box;
 }
 .about-col h3{
     padding: 0;
 }
 .about-col p{
-    padding: 15px 0 25px;
+    padding: 15px 15px 25px 15px;
 }
 /*------------team------------------*/
 .team{
@@ -298,6 +324,15 @@ h2{
     font-weight: 600;
 }
 
+.team_container{
+    display: flex;
+    flex-direction: column;
+}
+.team_row{
+    display: flex;
+    justify-content: space-around;
+}
+
 .row{
     margin-top: 5%;
     display: flex;
@@ -305,12 +340,24 @@ h2{
     justify-content: space-between;
 }
 .team-col{
-    flex-basis: 31%;
-    background: #6cbe4c;
+    /* flex-basis: 31%; */
+    background: linear-gradient(#ffffff,#6cbe4c);
+    border: 1px solid #6cbe4c;
+    box-sizing: border-box;
     border-radius:10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
+
+    display:block;
+    width:100%;
+    /* height:17vh; */
+    min-height: 17vh;
+
+    /* background-color:#475; */
+    /* overflow:scroll; */
+    /* overflow: scroll; */
+
 }
 h3{
     text-align: center;
@@ -319,11 +366,6 @@ h3{
 }
 .course-col:hover{
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-}
-@media(max-width:700px){
-    .row{
-        flex-direction: column;
-    }
 }
 /*--------------our services page---------*/
 .package{
@@ -347,7 +389,8 @@ h2{
 }
 .package-col{
     flex-basis: 31%;
-    background: #6cbe4c;
+    color: #292929;
+    background:linear-gradient(#ffffff,#0097b2);
     border-radius:10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -360,11 +403,6 @@ h3{
 }
 .package-col:hover{
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-}
-@media(max-width:700px){
-    .row{
-        flex-direction: column;
-    }
 }
 /*--------------contact us page---------*/
 .location{
@@ -411,4 +449,28 @@ h3{
     outline: none;
     border: 1px solid #292929;
     box-sizing: border-box;
+}
+
+
+
+@media(max-width:2560px){
+
+}
+
+@media(max-width:1920px){
+    .team-col{
+        min-height: 40vh;
+    }
+}
+
+@media(max-width:1080px){
+    .team-col{
+        min-height: 45vh;
+    }
+}
+
+@media(max-width:700px){
+    .team-col{
+        min-height: 55vh;
+    }
 }

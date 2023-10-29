@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); 
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header{
+    width: 1170px;
+    margin: auto;
+}
+
+body{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/banner2.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.nav-area li{
+    display: inline-block;
+}
+
+.nav-area li a{ 
+    color: #0097b2;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+.nav-area li a:hover{
+    background: #6cbe4c;
+}
+.logo img{
+    width: 150px;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+.welcome-text{
+    width: 90%;
+    color: #0097b2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.welcome-text h1{
+    font-size: 50px;
+}
+.welcome-text p{
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color: #0097b2;
+}
+
+.welcome-text a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #6cbe4c;
+    color: #0097b2;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.welcome-text a:hover{
+    background-color: #1d4286;
+}
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .header {
+        width: 90%;
+    }
+
+    body {
+        background-size: auto;
+        background-attachment: fixed;
+    }
+
+    .nav-area {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-area li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-area li a {
+        padding: 5px 10px;
+    }
+
+    .logo img {
+        width: 100px;
+        float: none;
+        padding: 0;
+    }
+}
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 576px) {
+    .nav-area li a {
+        padding: 5px 5px;
+        font-size: 12px;
+    }
+
+    .welcome-text h1 {
+        font-size: 40px;
+    }
+
+    .welcome-text p {
+        font-size: 12px;
+    }
+
+    .welcome-text a {
+        padding: 0.3rem 0.7rem;
+    }
+}
